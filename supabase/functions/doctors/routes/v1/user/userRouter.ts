@@ -1,6 +1,7 @@
 //supabase/functions/doctors/routes/v1/user/userRouter.ts
 
 import {Router} from "oak";
+import {sendOKResponse} from "../../../lib/utils/globalErrorHandler.ts";
 import {getSupabaseClient} from "../../../lib/supabase.ts";
 
 const router = new Router();
@@ -17,7 +18,13 @@ router.post("/", async (ctx) => {
     if (error) {
         throw error;
     } else {
-       return{ data }
+        sendOKResponse(
+            { data },
+            "fetch user successfully",
+            200,
+            ctx,
+
+        );
     }
 });
 

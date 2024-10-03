@@ -4,7 +4,7 @@
 2. Run this command
 
 ````
-supabase functions serve
+supabase functions serve --debug
 
 ````
 
