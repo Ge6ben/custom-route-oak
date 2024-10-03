@@ -1,4 +1,4 @@
-import {createClient, SupabaseClient} from "supabase";
+import {createClient, SupabaseClient} from "custom-route/supabase/functions/doctors/lib/supabase.ts";
 import {Database as DatabaseTypes} from "./types/database.types.ts";
 
 export type SupabaseClientType = SupabaseClient<DatabaseTypes, "public">;
