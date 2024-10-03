@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "start": {
+      "cmd": "deno run --allow-net --allow-read --allow-env index.ts",
+      "desc": "Start the Deno application"
+    }
+  },
+  "watcher": {
+    "exts": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "match": [
+      "./*"
+    ],
+    "skip": [
+      "*/.git/*",
+      "*/node_modules/*"
+    ]
+  }
+}
